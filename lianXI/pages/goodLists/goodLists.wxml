@@ -1,0 +1,51 @@
+<scroll-view scroll-y="true" bindscrolltolower="loadMore">
+<view class="category-page">
+  <view class="search-header">
+    <text class="iconfont icon-jiantou3 icon1"></text>
+    <view class="search">
+      <text class="iconfont icon-sousuo2"></text>
+      <input type="text" placeholder="请输入关键字" />
+    </view>
+    <text class="iconfont icon-leimupinleifenleileibie icon2"></text>
+  </view>
+  <!-- 综合栏 -->
+  <view class="zonghe-box">
+    <view class="zonghe1 {{aid==index?'active':''}}" wx:for="{{zongheDatas}}" wx:key="index" data-aid="{{index}}" bindtap="zonghe1Fn">{{item.title}}</view>
+  </view>
+</view>
+  <view class="big-box">
+    <!-- 详情页一行两列组件 -->
+  <view class="prolist" wx:for="{{goodListDatas}}" wx:key="index">
+  <view class="prolist1">
+    <view class="prolist-wrap">
+    <view class="prolist-item">
+      <navigator url="/pages/goodDetails/goodDetails?goods_id={{item.goods_id}}">
+        <view class="prolist-image">
+        <image src="{{item.goods_img}}"></image>
+      </view>
+      </navigator>
+      <view class="prolist-info">
+        <view class="prolist-info1">
+          <view class="info1-zi">
+            {{item.goods_name}}
+          </view>
+        <view class="info-price">{{item.shop_price}}</view>
+        <view class="info-bottom">
+          <view class="info-bottom-left">
+          <text class="info-bottom1">自营</text>
+          <text class="info-bottom2">0人已购买</text>
+          <text class="iconfont icon-gouwuche1 right-icon"></text>
+        </view>
+        </view>
+      </view>
+      </view>
+    </view>
+  </view>
+  </view>
+ </view>
+  </view>
+</scroll-view>
+ 
+
+
+ 

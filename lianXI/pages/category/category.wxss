@@ -1,0 +1,129 @@
+.category-page .search-header{
+  position: fixed;
+  width: 100%;
+  height: 88rpx;
+  background-color: #fff;
+  left: 0;
+  top: 6rpx;
+  z-index: 999;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category-page .search-header .search{
+  width: 90%;
+  height: 60rpx;
+  background: #f5f5f5;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.category-page .search-header .search .iconfont{
+  color: #999;
+  margin-right: 8rpx;
+}
+.category-page .search-header .search input{
+  color: #999 ;
+  font-size: 28rpx;
+}
+.category-page .category-left{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: -100rpx;
+  right: 0;
+  width: 180rpx;
+  height: 100%;
+  background: #f7f7f7;
+  margin-top: 200rpx;
+
+}
+.category-page .category-left .category-nav{
+  height: 70rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-size: 28rpx;
+  width: 176rpx;
+}
+.category-page .category-left .active{
+  background: #fff;
+  border-left: 2px solid #f00;
+  color: #f00;
+  
+}
+.category-page .category-right{
+  position: fixed;
+    width: calc(100% - 180rpx);
+    height: 100%;
+   margin: 88rpx 0 0 180rpx;
+    border-radius: 4rpx;
+    padding: 0 22rpx;
+    box-sizing: border-box;
+}
+.category-page .category-right .right-top{
+      width: 100%;
+      height: 192rpx;
+      margin-top: 22rpx;
+      border-radius: 4rpx;
+}
+.category-page .category-right .right-top .top-box{
+    width: 100%;
+    height: 100%;
+
+}
+.category-page .category-right .right-top .top-box image{
+  width: 100%;
+  height: 100%;
+}
+.category-page .category-right .line-box{
+  margin: 22rpx 0;
+  position: relative;
+  height: 50rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.category-right .imageAll{
+  width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+}
+.category-right .imageAll .item{
+  width: 33%;
+  display: flex;
+  justify-content: column;
+  align-items: center;
+}
+.category-right .imageAll .image-one{
+  width: 100%;
+  height: 164rpx;
+ 
+}
+.category-right .imageAll .image-one .small-one{
+  width: 110rpx;
+  height: 164rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+.category-right .imageAll .image-one .small-one image{
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 0;
+}
+.category-right .imageAll .image-one .small-one text{
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-align: center;
+  font-size: 22rpx;
+  color: #555;
+  margin-top: 20rpx;
+}

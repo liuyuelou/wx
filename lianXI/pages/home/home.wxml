@@ -1,0 +1,163 @@
+<view class="box-top" style="background:{{oColor}}">
+  <view class="sousuo">
+    <input class="text" name="userName" placeholder="搜索商品名称" />
+    <text class="icon1 iconfont icon-sousuo2"></text>
+    <text class="icon2 iconfont icon-xiaoxi"></text>
+  </view>
+</view>
+
+
+<!-- 上面部分 -->
+<scroll-view scroll-x="true" scroll-left="{{oLeft}}" scroll-with-animation="true" style="background:{{oColor}}">
+  <view class="tab-nav">
+    <view class="tab-item {{currentIndex==index?'active':''}}" data-current="{{index}}" wx:for="{{listDatas}}"
+      wx:key="index" bindtap="changeTab">{{item.title}}</view>
+  </view>
+</scroll-view>
+
+<view class="fenlei" style="background:{{oColor}}">
+  <text class="icon3 iconfont icon-fenlei"></text>
+  <text class="text1">分类</text>
+</view>
+
+
+<!-- 下面部分 -->
+<swiper class="swiper" current="{{currentIndex}}" bindchange="changeSwiper" style="height:{{widH}}px">
+  <!-- 上面部分的下面盒子 -->
+  <swiper-item>
+    <scroll-view bindscrolltolower="scrollTwoList" scroll-y="true" style="height:{{widH}}px">
+      <view class="box" style="background:{{oColor}}"></view>
+
+      <!-- 轮播图部分 -->
+      <swiper class="swiper1" autoplay indicator-dots indicator-color="#fff" indicator-active-color="#ff0"
+        circular="true" bindchange="changeSwiper1" interval="2000" duration="500" vertical="">
+        <swiper-item wx:for="{{swiperDatas}}" wx:key="index">
+          <image src="{{item.img}}"></image>
+        </swiper-item>
+      </swiper>
+      <!-- aaa -->
+      <!-- 首页轮播图下面的nav -->
+      <view class="nav-list">
+
+        <view class="nav-list-top">
+          <swiper class="nav-swiper" bindchange="changeNav">
+
+            <swiper-item class="nav-swiper-item" wx:for="{{swipeNav}}" wx:key="index">
+              <view class="nav-big-img" wx:for="{{item}}" wx:key="index">
+                <image class="nav-img" src="{{item.img}}"></image>
+                <view class="nav-name">{{item.desc}}</view>
+              </view>
+            </swiper-item>
+          </swiper>
+          <!-- 滑块下面的线 -->
+          <view class="top-xian"></view>
+        </view>
+        <!-- 轮播图下面的nav -->
+        <view class="gdt">
+          <view class="gdt1 {{flag==0?'active':''}}"></view>
+          <view class="gdt1 {{flag==1?'active':''}}"></view>
+          <view class="gdt1 {{flag==2?'active':''}}"></view>
+        </view>
+      </view>
+      <view class="nav-bottom">
+        <view class="bottom-image">
+          <image src="https://x.dscmall.cn/storage/data/gallery_album/177/original_img/177_P_1597978466633.png"></image>
+        </view>
+        <view class="bottom-text">
+          <swiper class="new-swiper" autoplay="true" circular="true" vertical="true">
+            <swiper-item class="new-swiper1" wx:for="{{swiperNew}}" wx:key="index" bindchange="changeNew">
+              {{item.title}}
+            </swiper-item>
+          </swiper>
+        </view>
+
+        <!-- 右箭头 -->
+        <view class="circle">
+          <view class="jiantou iconfont icon-jiantou1"></view>
+        </view>
+      </view>
+      <!-- 开学季大图片 -->
+      <view class="kaixue">
+        <image
+          src="https://x.dscmall.cn/storage/data/gallery_album/original_img/CPvH5WHHbF0EoG9XjRQbbT3knMVCeEt9DlYGQhJM.png?imageView2/2/format/webp">
+        </image>
+      </view>
+      <!-- 限时秒杀框 -->
+      <view class="miaosha">
+        <view class="miaosha-wrap">
+          <view class="miaosha-header">
+            <view class="header-middle">
+              <view class="miaosha-img">
+                <image
+                  src="https://x.dscmall.cn/storage/data/gallery_album/177/original_img/177_P_1597978468241.png?imageView2/2/format/webp">
+                </image>
+              </view>
+              <view class="miaosha-time">
+                <view class="jieshu">距结束还剩:</view>
+                <view class="red-box">
+                  <view class="shijian"></view>
+                  <text>:</text>
+                  <view class="shijian"></view>
+                  <text>:</text>
+                  <view class="shijian"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 抢购中 -->
+          <view class="qiang">
+            <view class="qiang-box " wx:for="{{miaoshaData}}" wx:key="index" data-active="{{index}}" bindtap="qiang"
+              data-id="{{item.id}}">
+              <view class="fourtime {{index==active?'active':''}}">{{item.title}}</view>
+              <view class="qianggouz {{index==active?'active':''}}">{{item.id==27?"抢购中":"即将开始"}}</view>
+            </view>
+          </view>
+
+          <!-- 更多秒杀商品框 -->
+          <view class="miaosha-shop">
+            <view class="miaosha-shop2">
+              <view class="miaosha-shop3">
+                <scroll-view scroll-x="true">
+                  <view class="miaosha-view">
+                    <view class="shop-box1" wx:for="{{miaoshaList}}" wx:key="index">
+                      <view class="shop-img">
+                        <image src="{{item.goods_thumb}}"></image>
+                      </view>
+                      <view class="miaosha-image">
+                        <image src="https://x.dscmall.cn/static/dist/img/seckill-tag.png"></image>
+                      </view>
+                      <view class="shop-bottom">
+                        <view class="shop-zi">
+                          {{item.goods_name}}
+                        </view>
+                        <view class="shop-price">
+                          <view class="shop-small">
+                            <i style="font-size: 21rpx;">￥</i>
+                            <text>{{item.sec_price}}</text>
+                            <i style="font-size: 21rpx;">.00</i>
+                          </view>
+                        </view>
+                        <view class="huaxian">
+                          <view class="huaxian-middle">
+                            <i style="font-size: 21rpx;">￥</i>
+                            <text>454</text>
+                            <i style="font-size: 21rpx;">.80</i>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </scroll-view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+      <goodListZJ detailListDatas="{{twoListjk}}" />
+    </scroll-view>
+  </swiper-item>
+ 
+  <!-- 最大框 -->
+</swiper>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goodListZJ":"../../commonent/goodListZJ/goodListZJ"
+  },
+  "navigationBarBackgroundColor": "#0094aa",
+  "navigationBarTitleText": "首页"
+}

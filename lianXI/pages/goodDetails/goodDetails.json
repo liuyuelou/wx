@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "br":"/commonent/br/br",
+    "goodListZJ":"../../commonent/goodListZJ/goodListZJ"
+  },
+  "navigationBarBackgroundColor": "#f00000",
+  "navigationBarTitleText": "详情页",
+  "navigationStyle":"custom",
+  "navigationBarTextStyle":"black"
+}

@@ -1,0 +1,394 @@
+.detail-navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.detail-navbar .navbar-wrap{
+  width: 100%;
+  height: 88rpx;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.detail-navbar .navbar-wrap .navbar-btn{
+  margin-left: 10rpx;
+}
+.detail-navbar .navbar-wrap .navbar-btn .iconfont{
+    font-size: 28rpx;
+    margin: 0 10rpx;
+}
+.detail-navbar .navbar-wrap .navbar-header{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-navbar .navbar-wrap .navbar-header .navbar-item{
+  width: 20%;
+  font-size: 28rpx;
+}
+.detail-navbar .navbar-wrap .navbar-header .active{
+  color: red;
+  font-weight: bold;
+}
+
+/* 详情页内容样式 */
+.detail-content{
+  position: relative;
+}
+.detail-content .detail-swiper{
+  width: 100%;
+  height: 750rpx;
+}
+.detail-content .detail-swiper image{
+  width: 100%;
+  height: 100%;
+}
+.detail-container{
+  width: 100%;
+  margin: 20rpx;
+  width: calc(100% - 40rpx);
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+.detail-container1{
+  width: 100%;
+  margin: 20rpx;
+  width: calc(100% - 40rpx);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-container .detail-price text::before{
+  content: "￥";
+}
+.detail-container1 .yixuan{
+  color: #999;
+}
+.detail-container .detail-price .price{
+  font-size: 44rpx;
+  color: #ff5555;
+  margin-right: 20rpx;
+  font-weight: bold;
+}
+.detail-container .kaitong{
+  width: 100%;
+  height: 106rpx;
+  background: #fff;
+}
+.detail-container .kaitong .kaitong-wrap{
+  width: 100%;
+  height: 90rpx;
+  background: #f7f8fc;
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-radius: 100rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-container .kaitong .kaitong-small{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-container .kaitong .kaitong-small .small-left{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail-container .kaitong .kaitong-small .small-left .left-huangguan{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.detail-container .kaitong .kaitong-small .small-left .left-huangguan image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.detail-container .kaitong .kaitong-small .small-left .left-zi{
+  width: 270rpx;
+  height: 100%;
+  line-height: 40rpx;
+}
+.detail-container .kaitong .kaitong-small .small-left .left-shu{
+  width: 148rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-weight: 700;
+}
+.detail-container .kaitong .kaitong-small .small-left .left-shu::before{
+  content: "￥";
+}
+.detail-container .kaitong .kaitong-small .small-right{
+  width: 25%;
+  height: 100%;
+  margin-left: 30rpx;
+}
+.detail-container .kaitong .kaitong-small .small-right .right-jiantou1{
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 100rpx;
+  line-height: 53rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.detail-container .kaitong .kaitong-small .small-right .right-jiantou{
+    width: 100%;
+    height: 100%;
+    margin-left: 10rpx;
+    color: #e3c49e;
+}
+.detail-container .kaitong .kaitong-small .small-right .right-realjiantou{
+  margin-right: 10rpx;
+  color: #e3c49e;
+}
+.detail-container .detail-price .dprice{
+  font-size: 28rpx;
+  color: #666;
+  text-decoration: line-through;
+}
+.detail-container .detail-title{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.select-title{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 弹窗样式 */
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 99;
+}
+.screen-wrap{
+  width: 100%;
+  height: 400rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 999;
+
+}
+.screen-wrap .close{
+  height: 88rpx;
+  text-align: right;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.screen-wrap .screen-content{
+  width: 100%;
+}
+.screen-wrap .screen-content .screen-goods{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.screen-wrap .screen-content .screen-goods .goods-image{
+  width: 180rpx;
+  height: 180rpx;
+  border: 2rpx solid #ccc;
+  position: absolute;
+  top: -130rpx;
+  left: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow:  5rpx 5rpx 5rpx #ccc,-5rpx -5rpx 10rpx #efefef;
+  overflow: hidden;
+}
+.screen-wrap .screen-content .screen-goods .goods-image image{
+  width: 100%;
+  height: 100%;
+  /* border-radius: 20rpx; */
+}
+.screen-wrap .screen-content .screen-goods .goods-title{
+  width: 55%;
+  left: 275rpx;
+  position: absolute;
+  top: -15rpx;
+}
+.screen-wrap .screen-content .screen-goods .goods-title .title{
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.screen-wrap .screen-content .screen-goods .goods-title .price{
+  font-size: 36rpx;
+  color: #f55;
+  margin-top: 20rpx;
+}
+.screen-wrap .screen-content .screen-goods .goods-title .price::before{
+  content: "￥";
+}
+.screen-wrap .screen-content .buy-wrap{
+  width: 100%;
+  height: 100rpx;
+  padding: 22rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+}
+.screen-wrap .screen-content .buy-wrap .count{
+    width: 70%;
+    height: 100%;
+    line-height: 56rpx;
+}
+.screen-wrap .screen-content .buy-wrap  .count-box{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}
+.screen-wrap .screen-content .buy-wrap  .count-box .jian{
+  width: 60rpx;
+  height: 100%;
+  line-height: 50rpx;
+  text-align: center;
+  /* padding: 10rpx;
+  box-sizing: border-box; */
+}
+.screen-wrap .screen-content .buy-wrap  .count-box .count-middle{
+  width: 60rpx;
+  height: 100%;
+  line-height: 50rpx;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  /* padding: 10rpx;
+  box-sizing: border-box; */
+}
+.screen-wrap .screen-content .buy-wrap  .count-box .jia{
+  width: 60rpx;
+  height: 100%;
+  line-height: 50rpx;
+  text-align: center;
+  /* padding: 10rpx;
+  box-sizing: border-box; */
+}
+.screen-wrap .rh{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.screen-wrap .rh .gobuy{
+  height: 100%;
+  line-height:100rpx ;
+  flex: 1;
+  background: #fba534;
+  text-align: center;
+}
+.screen-wrap .rh .tjcart{
+  height: 100%;
+  line-height:100rpx ;
+  flex: 1;
+  background: #f92028;
+  text-align: center;
+}
+
+/* 底部导航 */
+.footer-container{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-top: 1px solid #efefef;
+}
+.footer-container .footer-item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  flex-direction: column;
+  position: relative;
+}
+.footer-container .footer-item .kf{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+}
+.footer-container .footer-item .buyNum{
+  min-width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  padding: 5rpx;
+  background: #f44;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+}
+.footer-container .footer-item .iconfont{
+  font-size: 40rpx;
+}
+.footer-container .addcart{
+  flex: 2;
+  font-size: 28rpx;
+  background: #f44;
+  color: #fff;
+  height: 100%;
+}
+.footer-container .buy{
+  flex: 2;
+  font-size: 28rpx;
+  background: #ff976a;
+  color: #fff;
+  height: 100%;
+}

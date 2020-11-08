@@ -1,0 +1,166 @@
+<!-- //头部导航条 -->
+<import src="/wxParse/wxParse.wxml"></import>
+<view class="detail-navbar" style="height:{{navH}}rpx; background:rgba(255,255,255,{{opacity}}); ">
+  <view class="navbar-wrap">
+    <view class="navbar-btn">
+      <text class="iconfont icon-jiantou3" bindtap="goBackFn"></text>
+      <text class="iconfont icon-shouye"></text>
+    </view>
+    <view class="navbar-header" style="opacity:{{opacity}}">
+      <view class="navbar-item {{activeIndex==index?'active':''}} " data-id="detail{{index}}" wx:for="{{titleArr}}" wx:key="index" data-index="{{index}}" bindtap="tapNav">{{item}}</view>
+    </view>
+  </view>
+</view>
+<!-- 详情页内容 -->
+<view class="detail-content" style="top:{{navH}}rpx ">
+  <scroll-view scroll-y="true" bindscroll="scrollFn" style="height:{{height}}px" scroll-into-view="{{goId}}" scroll-with-animation="true">
+    <!-- 商品对应的块 -->
+    <view id="detail0">
+      <swiper class="detail-swiper">
+        <swiper-item class="detail-swiper-item">
+          <image src="{{goodDetailDatas.goods_img}}"></image>
+        </swiper-item>
+      </swiper>
+      <view class="detail-container">
+        <view class="detail-price">
+          <text class="price">{{goodDetailDatas.shop_price}}</text>
+          <text class="dprice">{{goodDetailDatas.shop_price-1+234}}</text>
+        </view>
+        <!-- 立即开通 -->
+        <view class="kaitong">
+          <view class="kaitong-wrap">
+            <view class="kaitong-small">
+             <view class="small-left">
+              <view class="left-huangguan">
+                  <image src="https://x.dscmall.cn/static/dist/img/icon-vip.png"></image>
+              </view>
+              <view class="left-zi">
+                高级VIP享超值优惠价
+              </view>
+              <view class="left-shu">
+                {{goodDetailDatas.shop_price}}
+              </view>
+             </view>
+             <view class="small-right">
+               <view class="right-jiantou1">
+                <view class="right-jiantou">立即开通</view>
+                <view class="iconfont icon-jiantou2 right-realjiantou"></view>
+               </view>
+             </view>
+            </view>
+          </view>
+        </view>
+        <view class="detail-title">
+          <view>{{goodDetailDatas.goods_name}}</view>
+        </view>
+      </view>
+      <br />
+      <!-- 点击显示蒙版 -->
+      <view class="select-title" bindtap="showMaskFn">
+        <view class="detail-container1">
+          <view>
+            <text class="yixuan">已选:</text>
+            <text class="yixuan-num">{{buyNum}}个</text>
+          </view>
+          <view class="iconfont icon-jiantou2"></view>
+        </view>
+      </view>
+      <br />
+      <view class="select-title" bindtap="showMaskFn">
+        <view class="detail-container1">
+          <view>
+            <text  class="yixuan">门店自提</text>
+          </view>
+          <view class="iconfont icon-jiantou2"></view>
+        </view>
+      </view>
+      <br />
+      <view class="select-title" bindtap="showMaskFn">
+        <view class="detail-container1">
+          <view>
+            <text  class="yixuan">网友讨论圈</text>
+          </view>
+          <view class="iconfont icon-jiantou2"></view>
+        </view>
+      </view>
+      <br />
+    </view>
+    <view id="detail1">
+      <view>商品详情</view>
+
+      <template is="wxParse" data="{{wxParseData:content .nodes}}" />
+
+    </view>
+    <view id="detail2">
+      <view>商品推荐</view>
+      <goodListZJ detailListDatas="{{goodDetailTJDatas}}" />
+    </view>
+    <view id="detail3">
+      <view>商品评论</view>
+      <view wx:for="{{goodsPLDatas}}" wx:key="index">
+        <image src="{{item.user_picture}}"></image>
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 弹窗蒙版 -->
+<view class="mask" wx:if="{{showMask}}"  bindtap="closeMaskFn" style="background: rgba(0,0,0,{{maskOpacity}});"></view>
+<view class="screen-wrap" wx:if="{{showMask}}" animation="{{animationData}}">
+  <view class="close">
+    <text class="iconfont icon-chahao" bindtap="closeMaskFn"></text>
+  </view>
+  <view class="screen-content">
+    <view class="screen-goods">
+      <view class="goods-image">
+        <image src="{{goodDetailDatas.goods_img}}"></image>
+      </view>
+      <view class="goods-title">
+        <view class="title">{{goodDetailDatas.goods_name}}</view>
+        <view class="price">{{goodDetailDatas.shop_price}}</view>
+      </view>
+    </view>
+    <view class="buy-wrap">
+      <view class="count">数量</view>
+      <view class="count-box">
+        <view class="jian" bindtap="changeNum" data-num="0">-</view>
+        <view class="count-middle">{{buyNum}}</view>
+        <view class="jia" bindtap="changeNum" data-num="1">+</view>
+      </view>
+    </view>
+  </view>
+  <!-- 红黄盒子 -->
+  <view class="rh">
+    <view class="gobuy">立即购买</view>
+    <view class="tjcart" bindtap="addCartOK">确定</view>
+  </view>
+</view>
+
+<!-- 底部导航 -->
+<view class="footer-container">
+  <view class="footer-item">
+    <button class="kf" session-from="{{goodDetailDatas.goods_id}}" open-type="contact"></button>
+    <view class="iconfont icon-kefu"></view>
+    <text class="">客服</text>
+  </view>
+
+  <view class="footer-item">
+    <view class="iconfont icon-shoucang"></view>
+    <text class="">收藏</text>
+  </view>
+
+  <view class="footer-item"  bindtap="toCartFn1" >
+    <view class="iconfont icon-gouwuche"></view>
+    <text class="">购物车</text>
+    <view class="buyNum">{{cartBuyNum}}</view>
+  </view>
+
+  <view class="footer-item addcart" bindtap="showMaskFn">
+    <text>加入购物车</text>
+  </view>
+
+  <view class="footer-item buy">
+    <text class="">立即购买</text>
+  </view>
+</view>

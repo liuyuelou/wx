@@ -1,0 +1,46 @@
+<scroll-view scroll-y="true" class="cart-wrap">
+  <block wx:for="{{cartListDatas}}" wx:key="index">
+    <view class="cart-list">
+      <view class="cart-list-wrap">
+        <view class="cart-icon" bindtap="checkRadio" data-index="{{index}}">
+          <icon type="success_circle" wx:if="{{item.isSelect }}"></icon>
+          <icon type="circle" wx:else></icon>
+        </view>
+        <view class="cart-image">
+          <navigator url="../goodDetails/goodDetails?goods_id={{item.goods_id}}&cartBuyNum={{item.buyNum}}">
+            <image src="{{item.goods_img}}"></image>
+          </navigator>
+
+        </view>
+        <view class="cart-content">
+          <view class="cart-title">{{item.goods_name}}</view>
+          <view class="cart-other">
+            <view class="cart-price">{{item.shop_price}}</view>
+            <view class="cart-num">
+              <text bindtap="jianCartNum" data-index="{{index}}">-</text>
+              <view>{{item.buyNum}}</view>
+              <text bindtap="addCartNum" data-index="{{index}}">+</text>
+            </view>
+            <view class="iconfont icon-shanchu1 dele" bindtap="deleCart" data-index="{{index}}"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 底部导航-->
+<view class="cart-footer">
+  <view class="cart-icon" bindtap="selectAllFn">
+    <icon type="success_circle" wx:if="{{!isSelectAll}}"></icon>
+    <icon type="circle" wx:else></icon>
+    <text>全选</text>
+  </view>
+  <view class="allprice">
+    结算:<text>{{totalPrice}}</text>
+  </view>
+  <view class="gobuy">
+    结算
+  </view>
+
+</view>

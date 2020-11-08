@@ -1,0 +1,50 @@
+<view class="category-page">
+  <view class="search-header">
+    <view class="search">
+      <text class="iconfont icon-sousuo2"></text>
+      <input type="text" placeholder="请输入关键字" />
+    </view>
+  </view>
+
+  <!-- 左边 -->
+  <view class="category-left">
+    <block wx:for="{{getLeftData}}" wx:key="index">
+      <view class="category-nav {{cid==index?'active':''}}" bindtap="changeCid"
+        data-cid="a{{index}}" bindtap="changeLeft" data-index="{{index}}">
+        <text>{{item.cat_name}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 右边 -->
+  <view class="category-right">
+    <scroll-view scroll-y="true" style="height:{{height}}rpx" scroll-with-animation="true" scroll-into-view="{{goId}}" bindscroll="scrollPage">
+      <block wx:for="{{getRightData}}" wx:key="index">
+        <view id="a{{index}}">
+          <view class="right-top">
+              <view class="top-box">
+                <image src="{{getLeftData[index].touch_catads}}"></image>
+              </view>
+            </view>
+          <block wx:for="{{item}}" wx:key="index">
+            
+            <view class="line-box">
+              <view class="box-zi">{{item.cat_name}}</view>
+            </view>
+            <view class="imageAll">
+              <block wx:for="{{item.child}}" wx:key="index">
+                <navigator url="../goodLists/goodLists?cat_id={{item.cat_id}}" class="item">
+                  <view class="image-one">
+                    <view class="small-one">
+                      <image src="{{item.touch_icon}}"></image>
+                      <text>{{item.cat_name}}</text>
+                    </view>
+                  </view>
+                </navigator>
+              </block>
+            </view>
+          </block>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

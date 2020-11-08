@@ -1,0 +1,482 @@
+.box-top {
+  width: 100%;
+  height: 88rpx;
+  position: relative;
+  /* background:red; */
+  z-index: 99;
+}
+
+.sousuo {
+  width: 80%;
+  height: 60rpx;
+  position: absolute;
+  top: 15%;
+  left: 36rpx;
+  border: 1px solid #efefef;
+  border-radius: 40rpx;
+  background: #fff;
+}
+
+.sousuo input {
+  height: 60rpx;
+}
+
+.icon1 {
+  position: absolute;
+  top: 14rpx;
+  right: 20rpx;
+  color: #ccc;
+}
+
+.icon2 {
+  position: absolute;
+  top: 8rpx;
+  right: -70rpx;
+  color: #ccc;
+  font-size: 44rpx;
+}
+
+.tab-nav {
+  width: 1350rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #fff;
+  transition: all 0.3s linear;
+  /* background: red; */
+}
+
+.tab-nav .tab-item {
+  float: left;
+  width: 150rpx;
+  text-align: center;
+}
+
+.tab-nav .tab-item.active {
+  color: #fff;
+  font-weight: 900;
+}
+
+.box {
+  width: 100%;
+  height: 100rpx;
+  /* background: red; */
+  border-radius: 0 0 50rpx 50rpx;
+}
+
+.fenlei {
+  width: 160rpx;
+  height: 55rpx;
+  position: absolute;
+  top: 105rpx;
+  right: -30rpx;
+  font-size: 44rpx;
+  /* background: red; */
+  margin-right: 20rpx;
+  color: #fff;
+  z-index: 99;
+}
+
+.fenlei .icon3 {
+  font-size: 54rpx;
+  float: left;
+}
+
+.text1 {
+  height: 72rpx;
+  line-height: 58rpx;
+  width: 100rpx;
+  font-size: 30rpx;
+  float: left;
+}
+
+.swiper {
+  width: 100%;
+  background: #efefef;
+  position: absolute;
+  height: auto;
+  top: 160rpx;
+  bottom: 0;
+}
+
+.swiper1 {
+  width: 95%;
+  height: 240rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 0;
+  left: 2.5%;
+
+}
+
+.swiper1 image {
+  width: 100%;
+  height: 240rpx;
+  border-radius: 30rpx;
+
+}
+
+/* 首页轮播图下面的nav */
+.nav-list {
+  width: 95%;
+  height: 442rpx;
+  background: #fff;
+  margin: -110rpx auto 0;
+  position: relative;
+  border-radius: 20rpx 20rpx 0 0;
+
+}
+
+.nav-list .nav-list-top {
+  width: 95%;
+  height: 460rpx;
+  padding-bottom: 30px;
+  margin: 275rpx auto 0;
+}
+
+.nav-list-top .top-xian {
+  border: 1px solid #efefef;
+  margin-top: -15rpx;
+}
+
+.nav-swiper {
+  width: 100%;
+  height: 450rpx;
+  position: relative;
+}
+
+.nav-list .gdt {
+  width: 120rpx;
+  height: 10rpx;
+  border-radius: 30rpx;
+  background: pink;
+  position: absolute;
+  bottom: 45rpx;
+  left: 50%;
+  margin-left: -60rpx;
+
+}
+
+.nav-list .gdt .gdt1 {
+  width: 40rpx;
+  height: 10rpx;
+  border-radius: 30rpx;
+  background: #efefef;
+  float: left;
+
+}
+
+.nav-list .gdt .gdt1.active {
+  background: red;
+}
+
+.nav-big-img {
+  width: 20%;
+  height: 180rpx;
+  float: left;
+}
+
+.nav-img {
+  width: 100%;
+  height: 140rpx;
+
+}
+
+.nav-swiper .nav-name {
+  width: 140rpx;
+  height: 32rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.nav-bottom {
+  width: 95%;
+  height: 100rpx;
+  margin: 0 2.5%;
+  background: #fff;
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.nav-bottom .bottom-image {
+  width: 20%;
+  height: 100rpx;
+  float: left;
+}
+
+.nav-bottom .bottom-image image {
+  width: 100%;
+  height: 70rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.nav-bottom .new-swiper {
+  width: 60%;
+  height: 70rpx;
+  float: left;
+  margin-left: 40rpx;
+  line-height: 90rpx;
+}
+
+.circle {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1.5px solid red;
+  border-radius: 50%;
+  float: right;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.circle .jiantou {
+  position: absolute;
+  top: -2rpx;
+  color: red;
+  font-weight: bold;
+}
+
+.kaixue {
+  width: 95%;
+  height: 350rpx;
+  margin: 20rpx auto;
+}
+
+.kaixue image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.miaosha {
+  width: 95%;
+  height: 670rpx;
+  background: #fff;
+  margin: 20rpx auto 0;
+  position: relative;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.miaosha .miaosha-wrap {
+  width: 100%;
+  height: 670rpx;
+}
+
+.miaosha .miaosha-wrap .miaosha-header {
+  width: 100%;
+  height: 120rpx;
+}
+
+.miaosha .miaosha-wrap .header-middle {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 44rpx 10rpx 24rpx 30rpx;
+}
+
+.miaosha .miaosha-wrap .miaosha-header .header-middle .miaosha-img {
+  width: 200rpx;
+  height: 44rpx;
+}
+
+.miaosha .miaosha-wrap .miaosha-header .header-middle .miaosha-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.miaosha-time {
+  width: 358rpx;
+  height: 40rpx;
+}
+
+.miaosha-time .jieshu {
+  width: 138rpx;
+  height: 34rpx;
+  font-size: 26rpx;
+  color: #333;
+  margin-right: 16rpx;
+  float: left;
+}
+
+.miaosha-time .red-box {
+  width: 194rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  float: right;
+}
+
+.miaosha-time .red-box .shijian {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  padding: 6rpx 10rpx;
+  background: #f91f28;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  min-width: 30rpx;
+  float: left;
+}
+
+.miaosha-time .red-box text {
+  margin: 3rpx 6rpx 0 6rpx;
+  line-height: 30rpx;
+  color: #f91f28;
+  font-weight: 800;
+  display: block;
+  float: left;
+}
+
+.qiang {
+  width: 710rpx;
+  height: 88rpx;
+  display: flex;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.qiang .qiang-box {
+  width: 180rpx;
+  height: 100rpx;
+  padding-bottom: 16rpx;
+  text-align: center;
+  cursor: pointer;
+}
+
+.qiang .qiang-box .fourtime {
+  width: 177rpx;
+  height: 42rpx;
+  font-weight: 600;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.qiang .qiang-box .qianggouz {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.miaosha .qiang .active {
+  color: #f91f28;
+  font-size: 30rpx;
+}
+
+.miaosha-shop {
+  width: 100%;
+  height: 414rpx;
+}
+
+.miaosha-shop .miaosha-shop2 {
+  width: 95%;
+  height: 414rpx;
+  padding: 20rpx;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 {
+  width: 100%;
+  height: 100%;
+  
+}
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .miaosha-view{
+  width: 100%;
+  height: 374rpx;
+  padding: 10rpx 6rpx;
+  display: flex;
+}
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 {
+  width: 220rpx;
+  height: 374rpx;
+  padding: 10rpx 6rpx;
+  position: relative;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-img {
+  width: 206rpx;
+  height: 206rpx;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-img image {
+  width: 100%;
+  height: 100%;
+
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .miaosha-image {
+  width: 100rpx;
+  height: 38rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .miaosha-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom {
+  width: 204rpx;
+  height: 150rpx;
+  padding: 20rpx 10rpx;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .shop-zi {
+  width: 184rpx;
+  height: 34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 26rpx;
+  color: #000;
+  font-family: -apple-system, Helvetica, sans-serif;
+  margin-left: 14rpx;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .shop-price {
+  width: 184rpx;
+  height: 36rpx;
+  margin-top: 12rpx;
+  margin-left: -32rpx;
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .shop-price .shop-small {
+  width: 110rpx;
+  height: 36rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  display: inline-block;
+  color: rgb(242, 14, 40);
+  
+}
+
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .shop-price .shop-small i {
+  width: 12rpx;
+  height: 24rpx;
+  font-weight: 700;
+  color: rgb(242, 14, 40);
+}
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .huaxian{
+  width: 186rpx;
+  height: 24rpx;
+  margin-top: 4rpx;
+ 
+}
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .huaxian .huaxian-middle{
+  width: 76rpx;
+  height: 24rpx;
+  margin-left: 38rpx;
+}
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .huaxian .huaxian-middle i{
+  width: 6rpx;
+  height: 24rpx;
+  color: rgb(136, 136, 136);
+}
+.miaosha-shop .miaosha-shop2 .miaosha-shop3 .shop-box1 .shop-bottom .huaxian .huaxian-middle text{
+  width: 66rpx;
+  height: 24rpx;
+  font-size: 21rpx;
+  font-weight: normal;
+  color: rgb(136, 136, 136);
+}

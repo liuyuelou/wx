@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goodListZJ":"/commonent/goodListZJ/goodListZJ"
+  },
+  "navigationStyle":"default", "navigationBarBackgroundColor": "#f00000",
+  "navigationBarTitleText": "列表页"
+}

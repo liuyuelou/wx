@@ -1,0 +1,191 @@
+.category-page .search-header {
+  position: fixed;
+  width: 100%;
+  height: 88rpx;
+  background-color: #fff;
+  left: 0;
+  top: 6rpx;
+  z-index: 999;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.category-page .search-header .icon1 {
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: left;
+  color: #ccc;
+  margin-right: 10rpx;
+}
+
+.category-page .search-header .search {
+  width: 80%;
+  height: 60rpx;
+  background: #f5f5f5;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* padding: 0 30rpx; */
+  box-sizing: border-box;
+  padding: 0 0 0 10rpx;
+  text-indent: 6rpx;
+}
+
+.category-page .search-header .icon2 {
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #666;
+  margin-left: 20rpx;
+  font-size: 40rpx;
+}
+
+.category-page .search-header .search .iconfont {
+  color: #999;
+  margin-right: 8rpx;
+}
+
+.category-page .search-header .search input {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.zonghe-box {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid #f1f1f1;
+  font-size: 26rpx;
+  margin-top: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zonghe-box .zonghe1 {
+  width: 148rpx;
+  height: 100%;
+  -webkit-box-flex: 1;
+}
+
+.zonghe-box .active {
+  color: #f92028;
+}
+.big-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+.big-box .prolist {
+  width: 50%;
+  height: 580rpx;
+}
+.big-box .prolist .prolist1{
+  width: 100%;
+  height: 100%;
+}
+.big-box .prolist .prolist1 .prolist-wrap {
+  width: 100%;
+  height: 100%;
+  padding: 10rpx 10rpx 0 10rpx;
+  box-sizing: border-box;
+}
+
+.big-box .prolist .prolist-wrap .prolist1 .prolist-item {
+  width: 50%;
+  height: 580rpx;
+  padding-right: 6rpx;
+  
+}
+
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-image {
+  width: 100%;
+  height: 358rpx;
+}
+
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info {
+  width: 100%;
+  height: 212rpx;
+  padding: 16rpx;
+  background-color: #fff;
+  border-radius: 0 0 10rpx 10rpx;
+}
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1{
+  width: 100%;
+  height: 100%;
+}
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .info1-zi{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 28rpx;
+}
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .info-price{
+  color:#f92028 ;
+  font-weight: bold;
+  padding: 12rpx 0px 12rpx;
+}
+.big-box .prolist .prolist1 .prolist-wrap .prolist-item .prolist-info .prolist-info1 .info-price::before{
+  content: "￥";
+}
+.big-box .prolist .prolist1  .prolist-wrap .prolist-item .prolist-info .prolist-info1 .info-bottom{
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+.big-box .prolist .prolist1  .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .info-bottom .info-bottom-left{
+  height: 100%;
+  width: 100%;
+    line-height: 40rpx;
+  
+}
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .info-bottom .info-bottom1{
+  width: 72rpx;
+  height: 44rpx;
+  background-color: #fef0f0;
+    padding: 2rpx 10rpx;
+    border-radius: 4rpx;
+    color: #f92028;
+    font-size: 26rpx;
+    float: left;
+    line-height: 44rpx;
+    box-sizing: border-box;
+}
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .info-bottom .info-bottom2{
+  width: 112rpx;
+  height: 44rpx;
+  color: #999;
+  margin-left: 25rpx;
+  font-size: 24rpx;
+  float: left;
+  line-height: 44rpx;
+}
+.big-box .prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .bottom-right{
+  width: 30rpx;
+  height: 32rpx;
+  float: left;
+}
+.prolist .prolist1 .prolist-wrap  .prolist-item .prolist-info .prolist-info1 .info-bottom .right-icon{
+  width: 30rpx;
+  height: 32rpx;
+  float: left;
+  margin-left: 80rpx;
+  color: #f92028;
+  font-size: 40rpx;
+}

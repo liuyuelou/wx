@@ -1,0 +1,33 @@
+<!-- 详情页一行两列组件 -->
+<view class="big-box">
+  <view class="prolist" wx:for="{{detailListDatas}}" wx:key="index">
+  <view class="prolist1">
+    <view class="prolist-wrap">
+    <view class="prolist-item">
+      <navigator url="/pages/goodDetails/goodDetails?goods_id={{item.goods_id}}">
+        <view class="prolist-image">
+        <image src="{{item.goods_thumb}}"></image>
+      </view>
+      </navigator>
+      <view class="prolist-info">
+        <view class="prolist-info1">
+          <view class="info1-zi" wx:if="true">
+            {{item.title}}
+          </view>
+          <view class="info1-zi" wx:else>
+            {{item.goods_name}}
+          </view>
+        <view class="info-price">{{item.shop_price}}</view>
+        <view class="info-bottom">
+          <view class="info-bottom-left">
+          <text class="iconfont icon-gouwuche1 right-icon"></text>
+        </view>
+        </view>
+      </view>
+      </view>
+    </view>
+  </view>
+  </view>
+ </view>
+
+</view>
